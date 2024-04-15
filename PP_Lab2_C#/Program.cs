@@ -24,14 +24,14 @@ class Program
     {
         Console.WriteLine("Введите номер дня недели");
         int dayI = Convert.ToInt16(Console.ReadLine());
-        if (dayI > 7 && dayI > 0) {
+        if (dayI < 0 || dayI > 7) {
             Console.WriteLine("Неверно введен день недели");
         }
         else
         {
             Console.WriteLine("Введите время");
             int dayTimeI = Convert.ToInt16(Console.ReadLine());
-            if (dayTimeI > 23 && dayTimeI > 0)
+            if (dayTimeI < 0 || dayTimeI > 23)
             {
                 Console.WriteLine("Неверно введено время");
             }
@@ -55,11 +55,6 @@ class Program
                 printDayTime((Day)(dayI-1), (DayTime)(dayTimeIndex));
             }
         }
-        
-
-        
-        
-        
     }
 
     static void printDayTime(Day day, DayTime dayTime)
